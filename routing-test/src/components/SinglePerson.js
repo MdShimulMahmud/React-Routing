@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { data } from "../data";
+import React from "react";
+import { useLocation } from "react-router-dom";
 const SinglePerson = () => {
   const dummy =
-    " Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, totam repellat quo tenetur, vitae perferendis labore recusandae pariatur error dolores cum, quia est maxime hic aut accusantium neque adipisci rerum nostrum placeat animi eaque reprehenderit eveniet et! Dolor neque explicabo, minima voluptatem nisi impedit ex, doloribus labore accusantium officiis quos corrupti alias incidunt esse? Ratione qui beatae provident veritatis iure nostrum repellat officia adipisci cumque, doloribus assumenda minus voluptatum dolorum necessitatibus corporis, officiis dolor repudiandae obcaecati sunt sed quod neque a sequi eveniet. Modi libero repudiandae, aut tempora, aliquam neque tenetur ipsum sapiente labore at reiciendis id autem architecto qui animi ";
+    " Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, totam repellat quo tenetur, vitae perferendis labore recusandae pariatur error dolores cum, quia est maxime hic aut accusantium neque adipisci rerum nostrum placeat animi eaque reprehenderit eveniet et! Dolor neque explicabo, minima voluptatem nisi impedit ex, doloribus labore ipsum sapiente labore at reiciendis id autem architecto qui animi ";
 
-  const { title } = useParams();
-  const [singleData, setSingleData] = useState("");
+  // dynamic routing
+  // const { title } = useParams();
+  // const [singleData, setSingleData] = useState("");
 
-  useEffect(() => {
-    const person = data.filter((event) => event.title === title);
-    setSingleData(person[0].data);
-  }, [title]);
-
+  // useEffect(() => {
+  //   const person = data.filter((event) => event.title === title);
+  //   setSingleData(person[0].data);
+  // }, [title]);
+  const location = useLocation();
+  console.log(location);
   return (
     <div>
-      <h1>{title}</h1>
-      <p>{`${singleData.title} ${dummy}`}</p>
+      <h1>{location.state.title}</h1>
+      <p>{`${location.state.data} ${dummy}`}</p>
     </div>
   );
 };

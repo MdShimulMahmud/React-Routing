@@ -23,7 +23,9 @@ const Contact = () => {
             <h1>{title}</h1>
             <h4>{singlePerson(data, 100)}</h4>
             <h5>
-              <Link to={title}>Learn more...</Link>
+              <Link to={title} state={{ id, title, data }}>
+                Learn more...
+              </Link>
             </h5>
           </p>
         );

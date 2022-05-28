@@ -1,7 +1,7 @@
 {
   // editor
-  "editor.fontSize": 20,
-  // "editor.fontFamily": "Fira Code, Operator Mono",
+  "editor.fontSize": 18,
+  "editor.fontFamily": "Fira Code, Operator Mono",
   // "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
   "editor.wordWrap": "on",

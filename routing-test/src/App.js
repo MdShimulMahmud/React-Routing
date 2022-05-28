@@ -5,6 +5,7 @@ import Home from "../src/components/Home";
 import Navbar from "../src/components/Navbar";
 import "./App.css";
 import SinglePerson from "./components/SinglePerson";
+import User from "./components/User";
 function App() {
   return (
     <BrowserRouter>
@@ -14,10 +15,10 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/contact/:title" element={<SinglePerson />} />
+        <Route path="/user" element={<User />} />
       </Routes>
     </BrowserRouter>
   );
 }
-
 
 export default App;
