@@ -17,6 +17,9 @@ const Home = () => {
         <NavLink className="nav-link" to="/admin">
           Admin
         </NavLink>
+        <NavLink className="nav-link" to="/api">
+          Api
+        </NavLink>
       </nav>
     </div>
   );

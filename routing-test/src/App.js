@@ -7,6 +7,7 @@ import Navbar from "../src/components/Navbar";
 import "./App.css";
 import Admin from "./components/Admin";
 import Protected from "./components/Protected";
+import RestApi from "./components/RestApi";
 import SinglePerson from "./components/SinglePerson";
 import User from "./components/User";
 function App() {
@@ -15,6 +16,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
+
       {isLoggedIn ? (
         <button onClick={() => setIsLoggedIn(!isLoggedIn)}>Log out</button>
       ) : (
@@ -26,6 +28,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/contact/:title" element={<SinglePerson />} />
         <Route path="/user" element={<User />} />
+        <Route path="/api" element={<RestApi />} />
         <Route
           path="/admin"
           element={
