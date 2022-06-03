@@ -1,7 +1,7 @@
 {
   // editor
-  "editor.fontSize": 18,
-  "editor.fontFamily": "Fira Code, Operator Mono",
+  "editor.fontSize": 20,
+  // "editor.fontFamily": "Fira Code, Operator Mono",
   // "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
   "editor.wordWrap": "on",
@@ -49,8 +49,7 @@
   //   "workbench.colorTheme": "Community Material Theme Darker High Contrast",
   // "workbench.colorTheme": "Dracula",
   // "workbench.colorTheme": "Andromeda",
-  // "workbench.colorTheme": "Tokyo Night",
-  // "workbench.colorTheme": "Learn with Sumit - Vintage",
+  "workbench.colorTheme": "Learn with Sumit - Vintage",
   "workbench.iconTheme": "material-icon-theme",
   // terminal customization
   "workbench.colorCustomizations": {
