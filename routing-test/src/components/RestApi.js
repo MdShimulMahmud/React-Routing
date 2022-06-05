@@ -5,7 +5,7 @@ const RestApi = () => {
 
   const [users, setUsers] = useState(null);
   const [loading, setLoading] = useState(true);
-
+  // post method
   const getAllUsers = () => {
     fetch(url)
       .then((res) => {
@@ -30,6 +30,23 @@ const RestApi = () => {
     getAllUsers();
   }, []);
 
+  // delete method
+
+  const handleDelete = (id) => {
+    fetch(url + `/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw Error("ID doesn't matched");
+        }
+        return getAllUsers();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div>
       {loading && <h2>CRUD Operation</h2>}
@@ -40,6 +57,11 @@ const RestApi = () => {
             <article key={id}>
               <p>{username}</p>
               <p>{email}</p>
+              <button type="text" onClick={handleDelete(id)}>
+                {" "}
+                Edit
+              </button>
+              <button type="text"> Delete</button>
             </article>
           );
         })}
